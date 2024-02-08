@@ -5,6 +5,6 @@ module com.example.progettoispw {
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
 
-    opens com.example.progettoispw to javafx.fxml;
-    exports com.example.progettoispw;
+    opens it.uniroma2.dicii.ispw to javafx.fxml;
+    exports it.uniroma2.dicii.ispw;
 }
