@@ -3,6 +3,7 @@ package it.uniroma2.dicii.ispw.utils;
 import it.uniroma2.dicii.ispw.utils.bean.GestoreBean;
 import it.uniroma2.dicii.ispw.utils.bean.GiocatoreBean;
 import it.uniroma2.dicii.ispw.utils.bean.ProprietarioBean;
+import it.uniroma2.dicii.ispw.utils.bean.Role;
 
 public class SessionManager {
 

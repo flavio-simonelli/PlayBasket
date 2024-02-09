@@ -1,0 +1,41 @@
+.toggle-button {
+    -fx-background-color: #E5D3A3;
+    -fx-text-fill: #000;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0, 0, 0.5), 10, 0, 10, 10);
+    -fx-background-radius: 15;
+    -fx-cursor: hand;
+}
+
+.toggle-button:selected {
+    -fx-background-color: #ffc300; /* Colore dello sfondo quando il ToggleButton è selezionato */
+    -fx-text-fill: #000000; /* Colore del testo quando il ToggleButton è selezionato */
+}
+
+.toggle-button:hover {
+    -fx-background-color: #f3dab1; /* Colore dello sfondo quando il ToggleButton è selezionabile */
+}
+
+.text-field{
+    -fx-border-width: 4px;
+    -fx-background-radius: 15;
+}
+
+.registra-button, .accedi-button {
+    -fx-background-color: transparent; /* Trasparenza dello sfondo */
+    -fx-text-fill: #000000; /* Colore del testo nero */
+    -fx-font-size: 25px; /* Dimensione del testo */
+    -fx-font-weight: bold; /* Grassetto */
+    -fx-border-width: 0; /* Nessun bordo */
+    -fx-padding: 0; /* Nessuna spaziatura interna */
+    -fx-cursor: hand; /* Cambio del cursore al passaggio del mouse */
+}
+
+.registra-button:hover, .accedi-button:hover {
+    -fx-text-fill: #FFA500; /* Cambio del colore del testo in arancione al passaggio del mouse */
+}
+
+.registra-button:pressed, .accedi-button:pressed {
+    -fx-text-fill: #FF8C00; /* Cambio del colore del testo in arancione al clic */
+}
+
+

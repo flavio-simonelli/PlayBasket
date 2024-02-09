@@ -66,12 +66,12 @@
    <children>
       <ImageView fitHeight="762.0" fitWidth="1201.0" opacity="0.11" GridPane.rowIndex="9">
          <image>
-            <Image url="@../../../Immagini/sfondo.jpg" />
+            <Image url="@../../../../Immagini/sfondo.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="51.0" fitWidth="46.0" GridPane.columnIndex="1" GridPane.rowIndex="17">
          <image>
-            <Image url="@../../../Immagini/home.png" />
+            <Image url="@../../../../Immagini/home.png" />
          </image>
       </ImageView>
       <Button fx:id="homeButton" mnemonicParsing="false" prefHeight="46.0" prefWidth="155.0" text="  Home" GridPane.columnSpan="3" GridPane.rowIndex="18">
@@ -161,12 +161,12 @@
       </Button>
       <ImageView fitHeight="200.0" fitWidth="200.0" GridPane.columnIndex="18" GridPane.rowIndex="1">
          <image>
-            <Image url="@../../../Immagini/palla.png" />
+            <Image url="@../../../../Immagini/palla.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="48.0" fitWidth="75.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <image>
-            <Image url="@../../../Immagini/freccia.png" />
+            <Image url="@../../../../Immagini/freccia.png" />
          </image>
       </ImageView>
    </children>
