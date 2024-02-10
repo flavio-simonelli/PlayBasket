@@ -3,6 +3,7 @@ package it.uniroma2.dicii.ispw.controller.controllerGrafico.interfaccia1;
 import it.uniroma2.dicii.ispw.controller.controllerApplicativo.LoginControllerApplicativo;
 import it.uniroma2.dicii.ispw.utils.bean.CredentialsBean;
 import it.uniroma2.dicii.ispw.utils.bean.Role;
+import it.uniroma2.dicii.ispw.utils.exceptions.SystemException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -27,7 +28,7 @@ public class Login1ControllerGrafico {
     @FXML
     private Label avviso;
     @FXML
-    private void clickAccesso() {
+    private void clickAccesso() throws SystemException {
         CredentialsBean cred=new CredentialsBean(username.getText(),password.getText());
         if (proprietario.isSelected()) {
             cred.setRole(Role.PROPRIETARIO);

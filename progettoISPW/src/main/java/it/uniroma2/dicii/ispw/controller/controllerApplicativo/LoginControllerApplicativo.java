@@ -10,10 +10,13 @@ import it.uniroma2.dicii.ispw.utils.bean.CredentialsBean;
 import it.uniroma2.dicii.ispw.utils.bean.GestoreBean;
 import it.uniroma2.dicii.ispw.utils.bean.ProprietarioBean;
 import it.uniroma2.dicii.ispw.utils.bean.Role;
+import it.uniroma2.dicii.ispw.utils.dao.GestoreDAO;
+import it.uniroma2.dicii.ispw.utils.dao.LoginDAO;
+import it.uniroma2.dicii.ispw.utils.exceptions.SystemException;
 
 public class LoginControllerApplicativo {
 
-    public void login(CredentialsBean cred){
+    public void login(CredentialsBean cred) throws SystemException {
         // Controllo attraverso loginDao se esiste un username con quelle credenziali
         LoginDAO loginDao = new LoginDAO();
         if(cred.getRole() == Role.GESTORE){
