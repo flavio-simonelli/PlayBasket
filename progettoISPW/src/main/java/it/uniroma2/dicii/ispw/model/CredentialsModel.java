@@ -12,6 +12,7 @@ public class CredentialsModel {
     public CredentialsModel(CredentialsBean credbean) {
         this.username = credbean.getUsername();
         this.password = credbean.getPassword();
+        this.role=credbean.getRole();
     }
 
     public String getUsername(){

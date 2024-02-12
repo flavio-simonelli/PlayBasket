@@ -29,4 +29,7 @@ public class CredentialsBean {
     public void setIdSession(int idSession){
         this.idSession = idSession;
     }
+    public int getIdSession(){
+        return this.idSession;
+    }
 }

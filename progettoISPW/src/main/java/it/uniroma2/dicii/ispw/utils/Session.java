@@ -7,13 +7,13 @@ public class Session {
     private final ProprietarioBean proprietarioBean;
     private final GestoreBean gestoreBean;
     private final Role role;
-    private final int idSession;
+    private final IdSessioneBean idSession;
 
     public GiocatoreBean getGiocatoreBean(){ return giocatoreBean;}
     public ProprietarioBean getProprietarioBean(){ return proprietarioBean;}
     public GestoreBean getGestoreBean(){ return gestoreBean;}
 
-    public Session(GiocatoreBean giocatoreBean, ProprietarioBean proprietarioBean, GestoreBean gestoreBean, Role role, int idSession){
+    public Session(GiocatoreBean giocatoreBean, ProprietarioBean proprietarioBean, GestoreBean gestoreBean, Role role, IdSessioneBean idSession){
         this.giocatoreBean = giocatoreBean;
         this.proprietarioBean = proprietarioBean;
         this.gestoreBean = gestoreBean;
@@ -21,7 +21,7 @@ public class Session {
         this.idSession=idSession;
     }
 
-    public int getID() {
+    public IdSessioneBean getIdSessionBean() {
         return idSession;
     }
 }

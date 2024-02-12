@@ -1,7 +1,10 @@
 package it.uniroma2.dicii.ispw.controller.controllerGrafico.interfaccia1;
 
 import it.uniroma2.dicii.ispw.controller.controllerApplicativo.LoginControllerApplicativo;
+import it.uniroma2.dicii.ispw.controller.controllerGrafico.interfaccia1.proprietario.HomePage1ControllerGrafico;
+import it.uniroma2.dicii.ispw.utils.ChangePage;
 import it.uniroma2.dicii.ispw.utils.bean.CredentialsBean;
+import it.uniroma2.dicii.ispw.utils.bean.IdSessioneBean;
 import it.uniroma2.dicii.ispw.utils.bean.Role;
 import it.uniroma2.dicii.ispw.utils.exceptions.SystemException;
 import javafx.fxml.FXML;
@@ -9,6 +12,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
+
+import java.io.IOException;
 
 public class Login1ControllerGrafico {
     @FXML
@@ -28,7 +33,7 @@ public class Login1ControllerGrafico {
     @FXML
     private Label avviso;
     @FXML
-    private void clickAccesso() throws SystemException {
+    private void clickAccesso() throws SystemException, IOException {   //Da ricontrollare le eccezioni
         CredentialsBean cred=new CredentialsBean(username.getText(),password.getText());
         if (proprietario.isSelected()) {
             cred.setRole(Role.PROPRIETARIO);
@@ -45,8 +50,9 @@ public class Login1ControllerGrafico {
         }
         LoginControllerApplicativo loginController = new LoginControllerApplicativo();
         loginController.login(cred);
+        IdSessioneBean id=new IdSessioneBean(cred.getIdSession());
+        ChangePage.cambiaPagina("/it/uniroma2/dicii/ispw/Interfacce/Interfaccia1/Proprietario/homePage.fxml",id);
 
-        // cambia pagina
 
     }
 }

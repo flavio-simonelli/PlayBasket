@@ -1,9 +1,6 @@
 package it.uniroma2.dicii.ispw.utils;
 
-import it.uniroma2.dicii.ispw.utils.bean.GestoreBean;
-import it.uniroma2.dicii.ispw.utils.bean.GiocatoreBean;
-import it.uniroma2.dicii.ispw.utils.bean.ProprietarioBean;
-import it.uniroma2.dicii.ispw.utils.bean.Role;
+import it.uniroma2.dicii.ispw.utils.bean.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,8 +20,17 @@ public class SessionManager {
         }
 
 
-    public Session createSession(GiocatoreBean giocatoreBean, ProprietarioBean proprietarioBean, GestoreBean gestoreBean, Role role,int idSession ){
+    public Session createSession(GiocatoreBean giocatoreBean, ProprietarioBean proprietarioBean, GestoreBean gestoreBean, Role role,IdSessioneBean idSession ){
         return new Session(giocatoreBean,proprietarioBean,gestoreBean,role,idSession);
+    }
+
+    public Session getSessionFromId(IdSessioneBean id){
+        for(Session session: sessioniAttive){
+            if(session.getIdSessionBean().getId()==id.getId()){
+                return session;
+            }
+        }
+        return null;
     }
 
     // Aggiunge una nuova sessione attive
@@ -33,8 +39,8 @@ public class SessionManager {
     }
 
     // Rimuove una sessione attiva
-    public void rimuoviSessione(int idSession) {
-        sessioniAttive.removeIf(sessione -> sessione.getID() == idSession);
+    public void rimuoviSessione(IdSessioneBean idSession) {
+        sessioniAttive.removeIf(sessione -> sessione.getIdSessionBean().getId() == idSession.getId());
     }
 }
 

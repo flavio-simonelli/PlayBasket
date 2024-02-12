@@ -13,4 +13,6 @@ public class GiocatoreModel extends UserModel {
         this.ruoloBasket = ruoloBasket;
     }
 
+    public GiocatoreModel(){}
+
 }

@@ -2,6 +2,7 @@ package it.uniroma2.dicii.ispw.utils.db;
 
 import it.uniroma2.dicii.ispw.utils.exceptions.SystemException;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
@@ -10,47 +11,29 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class ConnectionDB {
+    private static Connection connection;
 
-    private static ConnectionDB instance;
+    private ConnectionDB() {}
 
-    public static ConnectionDB getInstance() {
-        if (instance == null)
-            instance = new ConnectionDB();
-        return instance;
+    static {
+
+        try (InputStream input = new FileInputStream("src/main/java/it/uniroma2/dicii/ispw/utils/db/config.properties")) {
+            Properties properties = new Properties();
+            properties.load(input);
+
+            String connection_url = properties.getProperty("DB_URL");
+            String user = properties.getProperty("USER");
+            String pass = properties.getProperty("PASS");
+
+            connection = DriverManager.getConnection(connection_url, user, pass);
+        } catch (IOException | SQLException e) {
+            e.printStackTrace();
+        }
     }
 
-    private Connection connection;
-
-    public Connection connect() throws SystemException {
-
-        String user;
-        String pass;
-        String dbUrl;
-        String driverClassName;
-
-        try {
-            if (connection == null || connection.isClosed()) {
-                String resourceName = "config.properties";
-                InputStream inputStream = ConnectionDB.class.getClassLoader().getResourceAsStream(resourceName);
-                Properties props = new Properties();
-                props.load(inputStream);
-                pass = props.getProperty("PASS");
-                user = props.getProperty("USER");
-                dbUrl = props.getProperty("DB_URL");
-                driverClassName = props.getProperty("DRIVER_CLASS_NAME");
-                Class.forName(driverClassName);
-                DriverManager.setLoginTimeout(5);
-                connection = DriverManager.getConnection(dbUrl, user, pass);
-            }
-        } catch (SQLException e) {
-            /*Trigger trigger = new Trigger();
-            trigger.throwDBConnectionFailedException(e);*/
-        } catch (ClassNotFoundException | IOException e) {
-            throw new SystemException();
-        }
+    public static Connection getConnection() throws SQLException {
         return connection;
     }
-
 
     public void closeConnection() throws SQLException { connection.close(); }
 }
