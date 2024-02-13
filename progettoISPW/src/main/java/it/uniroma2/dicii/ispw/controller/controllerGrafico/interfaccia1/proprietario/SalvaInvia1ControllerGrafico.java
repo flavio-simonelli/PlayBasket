@@ -13,7 +13,7 @@ import javafx.scene.control.Label;
 
 import java.io.IOException;
 
-public class SalvaInvia1ControllerGrafico extends ControllerGrafico {
+public class SalvaInvia1ControllerGrafico extends ControllerGrafico {          //Questo è un commento per github
     private IdSessioneBean id;
     private RichiestaCampoSenzaFotoBean campoSenzaFotoBean;
     private FotoBean foto;
@@ -52,5 +52,7 @@ public class SalvaInvia1ControllerGrafico extends ControllerGrafico {
         ChangePage istanza=ChangePage.getChangePage();
         istanza.cambiaPagina("/it/uniroma2/dicii/ispw/Interfacce/Interfaccia1/Proprietario/AggiungiCampo/AggiungiFoto.fxml", this.id,campoSenzaFotoBean,null);
     }
+
+
 
 }

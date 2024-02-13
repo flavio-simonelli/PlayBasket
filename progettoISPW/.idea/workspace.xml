@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdebd4d7-a9cb-4f37-a23a-4650a3bf3b34" name="Changes" comment="Continuo parte samuele">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/uniroma2/dicii/ispw/Interfacce/Interfaccia1/Proprietario/AggiungiCampo/AggiungiFoto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/uniroma2/dicii/ispw/Interfacce/Interfaccia1/Proprietario/AggiungiCampo/AggiungiFoto.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="bdebd4d7-a9cb-4f37-a23a-4650a3bf3b34" name="Changes" comment="Continuo parte samuele" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +39,7 @@
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/samut/OneDrive/Desktop/NightsOutProject",
+    "last_opened_file_path": "C:/Users/samut/OneDrive/Desktop/Codice esempio ISPW/Gof2",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -85,7 +82,7 @@
       <workItem from="1707733408404" duration="10469000" />
       <workItem from="1707747763327" duration="9939000" />
       <workItem from="1707758407340" duration="3000" />
-      <workItem from="1707811818264" duration="11102000" />
+      <workItem from="1707811818264" duration="12624000" />
     </task>
     <task id="LOCAL-00001" summary="aggiornato path file fxml">
       <option name="closed" value="true" />
