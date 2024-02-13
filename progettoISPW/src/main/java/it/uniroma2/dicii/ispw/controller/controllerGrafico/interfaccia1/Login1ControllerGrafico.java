@@ -32,9 +32,10 @@ public class Login1ControllerGrafico {
     private Button accesso;
     @FXML
     private Label avviso;
+
     @FXML
     private void clickAccesso() throws SystemException, IOException {   //Da ricontrollare le eccezioni
-        CredentialsBean cred=new CredentialsBean(username.getText(),password.getText());
+        CredentialsBean cred = new CredentialsBean(username.getText(), password.getText());
         if (proprietario.isSelected()) {
             cred.setRole(Role.PROPRIETARIO);
 
@@ -50,9 +51,20 @@ public class Login1ControllerGrafico {
         }
         LoginControllerApplicativo loginController = new LoginControllerApplicativo();
         loginController.login(cred);
-        IdSessioneBean id=new IdSessioneBean(cred.getIdSession());
-        ChangePage.cambiaPagina("/it/uniroma2/dicii/ispw/Interfacce/Interfaccia1/Proprietario/homePage.fxml",id);
-
-
+        switch (cred.getRole()) {
+            case PROPRIETARIO ->
+                    ChangePage.cambiaPagina("/it/uniroma2/dicii/ispw/Interfacce/Interfaccia1/Proprietario/homePage.fxml", new IdSessioneBean(cred.getIdSession()),null);
+            case GIOCATORE -> {
+                break;     //sostiuire con home page del giocatore
+            }
+            case GESTORE ->{
+                break;     //sostituire con home page del gestore
+            }
+        }
     }
 }
+
+
+
+
+

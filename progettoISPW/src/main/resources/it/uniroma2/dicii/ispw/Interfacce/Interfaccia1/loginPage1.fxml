@@ -56,17 +56,17 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </ToggleButton>
-      <Button fx:id="registrazione" layoutX="613.0" layoutY="681.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="126.0" styleClass="registra-button" text="Registrati" textAlignment="CENTER">
+      <Button fx:id="registrazione" layoutX="613.0" layoutY="670.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="126.0" styleClass="registra-button" text="Registrati" textAlignment="CENTER">
          <font>
-            <Font size="43.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="accesso" layoutX="918.0" layoutY="681.0" mnemonicParsing="false" onAction="#clickAccesso" prefHeight="40.0" prefWidth="107.0" styleClass="accedi-button" text="Accedi" textAlignment="CENTER">
+      <Button fx:id="accesso" layoutX="914.0" layoutY="670.0" mnemonicParsing="false" onAction="#clickAccesso" prefHeight="54.0" prefWidth="126.0" styleClass="accedi-button" text="Accedi" textAlignment="CENTER">
          <font>
-            <Font size="31.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Label fx:id="avviso" layoutX="808.0" layoutY="715.0" prefHeight="40.0" prefWidth="327.0" textAlignment="CENTER">
+      <Label fx:id="avviso" layoutX="688.0" layoutY="303.0" prefHeight="40.0" prefWidth="327.0" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
