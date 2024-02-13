@@ -73,7 +73,7 @@
             <Image url="@../../../../Immagini/home.png" />
          </image>
       </ImageView>
-      <Button fx:id="homeButton" mnemonicParsing="false" prefHeight="46.0" prefWidth="155.0" text="  Home" GridPane.columnSpan="3" GridPane.rowIndex="18">
+      <Button fx:id="homeButton" mnemonicParsing="false" onAction="#backHome" prefHeight="46.0" prefWidth="155.0" text="  Home" GridPane.columnSpan="3" GridPane.rowIndex="18">
          <font>
             <Font name="System Bold" size="26.0" />
          </font></Button>
@@ -88,17 +88,17 @@
       <Label prefHeight="40.0" prefWidth="189.0" text="          Compila la scheda" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.columnSpan="3" />
       <Label prefHeight="40.0" prefWidth="231.0" text="             Aggiungi le foto" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.columnSpan="3" />
       <Label prefHeight="40.0" prefWidth="189.0" text="              Salva e invia" textAlignment="CENTER" GridPane.columnIndex="11" GridPane.columnSpan="3" />
-      <Label prefHeight="73.0" prefWidth="180.0" text="Nome del campo:" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="6">
+      <Label prefHeight="40.0" prefWidth="194.0" text="Nome del campo:" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="6">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label prefHeight="40.0" prefWidth="194.0" text="Indirizzo del campo:" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="9">
+      <Label prefHeight="40.0" prefWidth="194.0" text="Indirizzo:" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="9">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label prefHeight="40.0" prefWidth="130.0" text="Tariffa oraria:" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="12">
+      <Label prefHeight="40.0" prefWidth="191.0" text="           Tariffa oraria:" GridPane.columnSpan="4" GridPane.rowIndex="12">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -108,17 +108,17 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label prefHeight="40.0" prefWidth="207.0" text="Orario di chiusura" GridPane.columnIndex="11" GridPane.columnSpan="6" GridPane.rowIndex="9">
+      <Label prefHeight="40.0" prefWidth="180.0" text="Orario di chiusura" GridPane.columnIndex="11" GridPane.columnSpan="6" GridPane.rowIndex="9">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label prefHeight="40.0" prefWidth="328.0" text="Iban del proprietario" GridPane.columnIndex="11" GridPane.columnSpan="8" GridPane.rowIndex="12">
+      <Label prefHeight="40.0" prefWidth="205.0" text="Iban del proprietario" GridPane.columnIndex="11" GridPane.columnSpan="8" GridPane.rowIndex="12">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Button fx:id="backButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="       Back     " GridPane.columnSpan="3" GridPane.rowIndex="3">
+      <Button fx:id="backButton" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="180.0" text="       Back     " GridPane.columnSpan="3" GridPane.rowIndex="3">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
@@ -143,27 +143,27 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="indirizzo" prefHeight="40.0" prefWidth="359.0" text="   Via giuseppe verdi 5" GridPane.columnIndex="4" GridPane.columnSpan="9" GridPane.rowIndex="9">
+      <Label fx:id="indirizzo" prefHeight="40.0" prefWidth="359.0" text="Via giuseppe verdi 5" GridPane.columnIndex="4" GridPane.columnSpan="9" GridPane.rowIndex="9">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="tariffa" prefHeight="40.0" prefWidth="359.0" text="  10 eur/h" GridPane.columnIndex="3" GridPane.columnSpan="10" GridPane.rowIndex="12">
+      <Label fx:id="tariffa" prefHeight="40.0" prefWidth="362.0" text="10 eur/h" GridPane.columnIndex="4" GridPane.columnSpan="10" GridPane.rowIndex="12">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="iban" prefHeight="40.0" prefWidth="359.0" text="     Mario Rossi" GridPane.columnIndex="15" GridPane.columnSpan="4" GridPane.rowIndex="12">
+      <Label fx:id="iban" prefHeight="40.0" prefWidth="359.0" text="Mario Rossi" GridPane.columnIndex="15" GridPane.columnSpan="4" GridPane.rowIndex="12">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="chiusura" prefHeight="40.0" prefWidth="359.0" text="     XXXXXXXXXXXXXXXX" GridPane.columnIndex="14" GridPane.columnSpan="6" GridPane.rowIndex="9">
+      <Label fx:id="chiusura" prefHeight="40.0" prefWidth="359.0" text="XXXXXXXXXXXXXXXX" GridPane.columnIndex="15" GridPane.columnSpan="6" GridPane.rowIndex="9">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="apertura" prefHeight="40.0" prefWidth="359.0" text="9-18" GridPane.columnIndex="14" GridPane.columnSpan="6" GridPane.rowIndex="6">
+      <Label fx:id="apertura" prefHeight="40.0" prefWidth="359.0" text="9-18" GridPane.columnIndex="15" GridPane.columnSpan="6" GridPane.rowIndex="6">
          <font>
             <Font size="20.0" />
          </font>

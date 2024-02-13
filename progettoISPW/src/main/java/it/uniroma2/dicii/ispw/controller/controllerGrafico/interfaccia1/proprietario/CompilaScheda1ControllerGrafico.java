@@ -5,6 +5,7 @@ import it.uniroma2.dicii.ispw.utils.ChangePage;
 import it.uniroma2.dicii.ispw.utils.Session;
 import it.uniroma2.dicii.ispw.utils.SessionManager;
 import it.uniroma2.dicii.ispw.utils.bean.IdSessioneBean;
+import it.uniroma2.dicii.ispw.utils.bean.Interfaccia1.FotoBean;
 import it.uniroma2.dicii.ispw.utils.bean.Interfaccia1.RichiestaCampoSenzaFotoBean;
 import it.uniroma2.dicii.ispw.utils.bean.ProprietarioBean;
 import javafx.fxml.FXML;
@@ -41,18 +42,20 @@ public class CompilaScheda1ControllerGrafico extends ControllerGrafico {
     private TextField iban;
     private IdSessioneBean id;
     @Override
-    public void inizializza(IdSessioneBean id, RichiestaCampoSenzaFotoBean campoSenzaFotoBean){
+    public void inizializza(IdSessioneBean id, RichiestaCampoSenzaFotoBean campoSenzaFotoBean, FotoBean foto){
         this.id=id;
     }
 
     public void backHome() throws IOException {    //vedi come gestire eccezione
-        ChangePage.cambiaPagina("/it/uniroma2/dicii/ispw/Interfacce/Interfaccia1/Proprietario/homePage.fxml", this.id,null);
+        ChangePage istanza=ChangePage.getChangePage();
+        istanza.cambiaPagina("/it/uniroma2/dicii/ispw/Interfacce/Interfaccia1/Proprietario/homePage.fxml", this.id,null,null);
     }
 
     public void clickAvanti() throws IOException {
 
         RichiestaCampoSenzaFotoBean richiesta=new RichiestaCampoSenzaFotoBean(nomeCampo.getText(),indirizzo.getText(), Integer.valueOf(tariffa.getText()), Time.valueOf(apertura.getText()),Time.valueOf(chiusura.getText()),iban.getText());
-        ChangePage.cambiaPagina("/it/uniroma2/dicii/ispw/Interfacce/Interfaccia1/Proprietario/AggiungiCampo/AggiungiFoto.fxml", this.id,richiesta);
+        ChangePage istanza=ChangePage.getChangePage();
+        istanza.cambiaPagina("/it/uniroma2/dicii/ispw/Interfacce/Interfaccia1/Proprietario/AggiungiCampo/AggiungiFoto.fxml", this.id,richiesta,null);
     }
 
 }

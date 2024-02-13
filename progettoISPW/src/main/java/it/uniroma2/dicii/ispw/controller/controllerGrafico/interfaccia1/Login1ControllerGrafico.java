@@ -51,9 +51,10 @@ public class Login1ControllerGrafico {
         }
         LoginControllerApplicativo loginController = new LoginControllerApplicativo();
         loginController.login(cred);
+        ChangePage istanza=ChangePage.getChangePage();
         switch (cred.getRole()) {
             case PROPRIETARIO ->
-                    ChangePage.cambiaPagina("/it/uniroma2/dicii/ispw/Interfacce/Interfaccia1/Proprietario/homePage.fxml", new IdSessioneBean(cred.getIdSession()),null);
+                    istanza.cambiaPagina("/it/uniroma2/dicii/ispw/Interfacce/Interfaccia1/Proprietario/homePage.fxml", new IdSessioneBean(cred.getIdSession()),null,null);
             case GIOCATORE -> {
                 break;     //sostiuire con home page del giocatore
             }
